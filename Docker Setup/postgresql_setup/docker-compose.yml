@@ -1,0 +1,56 @@
+#version: '2.4'
+services:
+  postgresdb:
+    image: postgres:18.2-alpine3.23
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      # Use your own values for security
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_NON_ROOT_USER: ${POSTGRES_NON_ROOT_USER}
+      POSTGRES_NON_ROOT_PASSWORD: ${POSTGRES_NON_ROOT_PASSWORD}
+      PGDATA: ${PGDATA}
+      # Timezone Fix: Use Asia/Kolkata (Asia/Calcutta is legacy)
+      TZ: ${TZ}
+      PGTZ: ${PGTZ}
+    ports:
+      - '5436:5432' # Maps Windows port 5436 to Postgres container port 5432
+
+    volumes:
+      # Bind Mount: "Windows Host Path : Container Path"
+      # Use forward slashes (/) or escaped backslashes (\\)
+      - ./postgresdb_vol:/var/lib/postgresql/data
+      - ./mypostgresql.conf:/etc/postgresql/postgresql.conf:ro
+      - ./mypg_hba.conf:/etc/postgresql/pg_hba.conf:ro
+      - ./init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
+    networks:
+      - mydbnet
+    security_opt:
+      - no-new-privileges:true
+     
+    # 5. Restrict resources to prevent DoS attacks via resource exhaustion
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          memory: 256M
+
+        # 8. Automated health checks for monitoring
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 15s #30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    
+
+networks:
+  mydbnet:
+    external: true
+    
+    
+

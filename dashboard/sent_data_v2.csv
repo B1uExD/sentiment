@@ -1,0 +1,301 @@
+post_id,post,post_type,sentiment_label,sentiment_confidence,category,severity_level,compliance_flag,summary,recommended_action,created_at
+P001,UPI payment failed but money deducted,Complaint,Negative,0.91,Payments,High,FALSE,UPI failure with debit,Escalate operations,10-04-2026 09:05
+P002,Got phishing SMS asking for OTP,Fraud,Negative,0.97,Fraud,Critical,TRUE,Phishing attempt detected,Escalate fraud team,10-04-2026 09:12
+P003,App is working smoothly now,Feedback,Positive,0.86,Digital Banking,Low,FALSE,Positive app feedback,Monitor only,10-04-2026 09:18
+P004,Credit card charged extra fees,Complaint,Negative,0.89,Loans,Medium,FALSE,Fee complaint,Respond customer,10-04-2026 09:25
+P005,Net banking not working since morning,Complaint,Negative,0.92,Digital Banking,High,FALSE,Login issue,Escalate operations,10-04-2026 09:41
+P006,Great customer support experience,Feedback,Positive,0.88,Customer Service,Low,FALSE,Good service feedback,Monitor only,10-04-2026 10:03
+P007,OTP asked on suspicious call,Fraud,Negative,0.94,Fraud,Critical,TRUE,OTP scam detected,Escalate fraud team,10-04-2026 10:15
+P008,UPI is fine but competitor is faster,Feedback,Neutral,0.74,Payments,Medium,FALSE,Competitor comparison,Monitor,10-04-2026 10:22
+P009,Loan approval taking too long,Complaint,Negative,0.87,Loans,Medium,FALSE,Delay complaint,Respond customer,10-04-2026 10:37
+P010,Loved cashback offers this month,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive marketing response,Monitor,10-04-2026 11:08
+P011,ATM deducted money but no cash,Complaint,Negative,0.92,Payments,High,FALSE,ATM cash issue,Escalate ops,10-04-2026 11:19
+P012,KYC OTP scam call received,Fraud,Negative,0.95,Fraud,Critical,TRUE,Fraud attempt,Escalate fraud,10-04-2026 11:27
+P013,Loan interest okay but slow process,Feedback,Neutral,0.78,Loans,Medium,FALSE,Mixed feedback,Monitor,10-04-2026 12:02
+P014,App crashes during transfer,Complaint,Negative,0.93,Digital Banking,High,FALSE,Crash issue,Escalate ops,10-04-2026 12:16
+P015,Great cashback rewards,Promotion,Positive,0.9,Marketing,Low,FALSE,Positive rewards,Monitor,10-04-2026 12:45
+P016,Unauthorized transaction attempt,Fraud,Negative,0.96,Fraud,Critical,TRUE,Fraud attempt,Escalate fraud,10-04-2026 13:05
+P017,Net banking UI feels outdated,Feedback,Neutral,0.72,Digital Banking,Medium,FALSE,UI comparison,Monitor,10-04-2026 13:18
+P018,Transaction failed but money deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transaction issue,Escalate ops,10-04-2026 13:39
+P019,Lottery scam SMS received,Fraud,Negative,0.93,Fraud,Critical,TRUE,Scam SMS,Escalate fraud,10-04-2026 14:07
+P020,Branch wait time too long,Feedback,Neutral,0.75,Customer Service,Medium,FALSE,Service delay,Monitor,10-04-2026 14:28
+P021,Money transferred but receiver did not get it,Complaint,Negative,0.92,Payments,High,FALSE,Delayed transfer issue,Escalate operations,11-04-2026 15:11
+P022,Received fake email asking to verify bank details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,11-04-2026 15:49
+P023,Mobile app UI is very user friendly and fast,Feedback,Positive,0.89,Digital Banking,Low,FALSE,Positive UI feedback,Monitor only,11-04-2026 16:06
+P024,Credit card bill not reflecting recent payment,Complaint,Negative,0.9,Loans,Medium,FALSE,Billing mismatch issue,Respond customer,11-04-2026 16:33
+P025,UPI services down again today,Complaint,Negative,0.94,Payments,High,FALSE,Service outage complaint,Escalate operations,10-04-2026 17:02
+P026,"Support team resolved my issue quickly, very satisfied",Feedback,Positive,0.88,Customer Service,Low,FALSE,Positive support feedback,Monitor only,10-04-2026 09:02
+P027,Someone tried to login to my account from unknown location,Fraud,Negative,0.97,Fraud,Critical,TRUE,Suspicious login attempt,Escalate fraud team,10-04-2026 09:14
+P028,Loan interest rates are higher compared to competitors,Feedback,Neutral,0.76,Loans,Medium,FALSE,Competitor comparison,Monitor,10-04-2026 09:29
+P029,ATM withdrawal successful but cash was delayed,Complaint,Negative,0.86,Payments,Medium,FALSE,ATM delay issue,Respond customer,10-04-2026 09:36
+P030,Bank app keeps logging me out frequently,Complaint,Negative,0.91,Digital Banking,High,FALSE,Session instability,Escalate ops,10-04-2026 10:06
+P031,"Got cashback instantly on transaction, very happy",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive offer feedback,Monitor only,12-04-2026 10:17
+P032,Fake SMS claiming my account will be blocked,Fraud,Negative,0.95,Fraud,Critical,TRUE,Scam SMS detected,Escalate fraud team,12-04-2026 10:33
+P033,Branch staff was polite and helpful,Feedback,Positive,0.87,Customer Service,Low,FALSE,Good branch experience,Monitor only,10-04-2026 10:48
+P034,Transaction failed during festival peak hours,Complaint,Negative,0.92,Payments,High,FALSE,Peak load failure,Escalate operations,12-04-2026 11:04
+P035,Loan approval process improved recently,Feedback,Positive,0.85,Loans,Low,FALSE,Positive improvement feedback,Monitor only,10-04-2026 11:13
+P036,"Received call asking for CVV number, seems suspicious",Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,10-04-2026 11:26
+P037,Net banking works fine but mobile app is better,Feedback,Neutral,0.75,Digital Banking,Medium,FALSE,Channel comparison feedback,Monitor,10-04-2026 12:09
+P038,Money deducted twice for same transaction,Complaint,Negative,0.93,Payments,High,FALSE,Duplicate debit issue,Escalate operations,10-04-2026 12:21
+P039,Great festive offers and discounts this month,Promotion,Positive,0.88,Marketing,Low,FALSE,Positive campaign response,Monitor only,10-04-2026 12:38
+P040,Account frozen without proper explanation,Complaint,Negative,0.94,Customer Service,Critical,TRUE,Account restriction issue,Escalate compliance team,10-04-2026 13:03
+P041,UPI payment stuck but money deducted from account,Complaint,Negative,0.93,Payments,High,FALSE,Stuck transaction issue,Escalate operations,10-04-2026 13:17
+P042,Got fake call claiming bank KYC update needed urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,KYC scam detected,Escalate fraud team,10-04-2026 13:42
+P043,App performance has improved a lot recently,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive performance feedback,Monitor only,10-04-2026 14:11
+P044,Credit card transaction not showing in statement,Complaint,Negative,0.89,Loans,Medium,FALSE,Statement mismatch,Respond customer,12-04-2026 14:25
+P045,UPI service was down during peak hours,Complaint,Negative,0.94,Payments,High,FALSE,Service outage issue,Escalate operations,10-04-2026 15:08
+P046,Customer care resolved my issue quickly and politely,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive support experience,Monitor only,10-04-2026 15:34
+P047,Someone tried to reset my password without permission,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,12-04-2026 16:02
+P048,Loan processing is okay but slower than expected,Feedback,Neutral,0.76,Loans,Medium,FALSE,Mixed loan feedback,Monitor,10-04-2026 16:19
+P049,ATM did not dispense cash but amount got deducted,Complaint,Negative,0.93,Payments,High,FALSE,ATM cash issue,Escalate operations,10-04-2026 17:07
+P050,Mobile app keeps freezing during login,Complaint,Negative,0.91,Digital Banking,High,FALSE,Login freeze issue,Escalate ops,11-04-2026 09:07
+P051,"Received cashback instantly, very smooth experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward experience,Monitor only,11-04-2026 09:21
+P052,Fake SMS asking to click link and verify PAN details,Fraud,Negative,0.95,Fraud,Critical,TRUE,Phishing SMS detected,Escalate fraud team,11-04-2026 09:44
+P053,Branch staff was very helpful and polite,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch experience,Monitor only,12-04-2026 19:36
+P054,Transaction failed but balance was deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch,Escalate operations,12-04-2026 20:36
+P055,Loan interest rates are acceptable but processing is slow,Feedback,Neutral,0.77,Loans,Medium,FALSE,Processing delay feedback,Monitor,11-04-2026 10:18
+P056,Got suspicious email asking for account verification,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email alert,Escalate fraud team,11-04-2026 19:36
+P057,Net banking UI is not very intuitive compared to others,Feedback,Neutral,0.74,Digital Banking,Medium,FALSE,UI feedback vs competitor,Monitor,12-04-2026 10:36
+P058,Money transferred but receiver says not received,Complaint,Negative,0.92,Payments,High,FALSE,Transfer mismatch issue,Escalate operations,11-04-2026 11:09
+P059,Festival offers are really good this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,11-04-2026 11:22
+P060,Account suddenly blocked without any notification,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account freeze,Escalate compliance team,11-04-2026 19:22
+P061,UPI payment failed but amount debited instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,11-04-2026 12:14
+P062,Received fake OTP request on SMS for verification,Fraud,Negative,0.97,Fraud,Critical,TRUE,OTP phishing attempt,Escalate fraud team,11-04-2026 12:41
+P063,Mobile app is running much smoother after update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive update feedback,Monitor only,11-04-2026 20:41
+P064,Credit card payment not reflecting even after 3 days,Complaint,Negative,0.9,Loans,Medium,FALSE,Delayed payment issue,Respond customer,11-04-2026 13:03
+P065,UPI services completely down in my area,Complaint,Negative,0.95,Payments,High,FALSE,Service outage report,Escalate operations,11-04-2026 13:27
+P066,Customer care solved my issue within minutes,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive support feedback,Monitor only,12-04-2026 13:27
+P067,Someone tried to change my password without my permission,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account compromise attempt,Escalate fraud team,12-04-2026 09:06
+P068,Loan approval process is okay but needs improvement,Feedback,Neutral,0.75,Loans,Medium,FALSE,Neutral loan feedback,Monitor,12-04-2026 09:19
+P069,ATM did not give cash but balance deducted,Complaint,Negative,0.94,Payments,High,FALSE,ATM debit issue,Escalate operations,12-04-2026 09:35
+P070,App keeps crashing while doing UPI payment,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,10-04-2026 19:35
+P071,Great cashback rewards received instantly,Promotion,Positive,0.9,Marketing,Low,FALSE,Positive offer feedback,Monitor only,12-04-2026 10:11
+P072,Fake call asking for CVV number immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,12-04-2026 10:28
+P073,Branch staff was very cooperative and helpful,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch experience,Monitor only,12-04-2026 13:05
+P074,Transaction failed during payment but money deducted,Complaint,Negative,0.93,Payments,High,FALSE,Payment mismatch issue,Escalate operations,10-04-2026 18:35
+P075,Loan interest rates are okay but processing takes time,Feedback,Neutral,0.76,Loans,Medium,FALSE,Processing delay comment,Monitor,12-04-2026 11:08
+P076,Received suspicious email asking for account verification,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email attempt,Escalate fraud team,12-04-2026 11:23
+P077,Net banking interface is confusing compared to competitors,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX comparison feedback,Monitor,10-04-2026 11:23
+P078,UPI transfer failed but amount was deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,12-04-2026 12:16
+P079,Festival offers are really attractive this season,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign feedback,Monitor only,12-04-2026 12:39
+P080,Account blocked suddenly without any explanation,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account restriction,Escalate compliance team,12-04-2026 13:05
+P081,UPI payment failed but balance was deducted,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,12-04-2026 13:05
+P082,Received SMS asking for OTP to update KYC,Fraud,Negative,0.97,Fraud,Critical,TRUE,Phishing SMS detected,Escalate fraud team,12-04-2026 13:31
+P083,Mobile app feels faster after latest update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive update feedback,Monitor only,12-04-2026 13:52
+P084,Credit card payment not showing in account,Complaint,Negative,0.9,Loans,Medium,FALSE,Payment mismatch,Respond customer,01-04-2026 00:12
+P085,UPI service completely down today,Complaint,Negative,0.95,Payments,High,FALSE,Service outage,Escalate operations,01-04-2026 08:34
+P086,Customer care resolved issue very quickly,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service feedback,Monitor only,01-04-2026 21:47
+P087,Someone tried to reset my password without consent,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,12-04-2026 13:05
+P088,Loan approval process is acceptable but slow,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,02-04-2026 02:15
+P089,ATM withdrew money but cash was not dispensed,Complaint,Negative,0.94,Payments,High,FALSE,ATM cash issue,Escalate operations,02-04-2026 09:22
+P090,App crashes during every UPI transaction,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability,Escalate ops,02-04-2026 09:58
+P091,"Received instant cashback on purchase, very happy",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive offer feedback,Monitor only,02-04-2026 18:36
+P092,Fake call asking for CVV details immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,12-04-2026 13:05
+P093,Branch staff was polite and very helpful,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,03-04-2026 05:11
+P094,Transaction failed but money deducted from account,Complaint,Negative,0.94,Payments,High,FALSE,Transaction issue,Escalate operations,03-04-2026 11:49
+P095,Loan interest is fine but processing delay is frustrating,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,03-04-2026 23:05
+P096,Suspicious email asking to verify bank account details,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,10-04-2026 19:35
+P097,Net banking interface is not very user friendly,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback,Monitor,04-04-2026 07:28
+P098,UPI transfer failed but amount was debited,Complaint,Negative,0.94,Payments,High,FALSE,Transfer issue,Escalate operations,04-04-2026 14:16
+P099,Festive offers are really good this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,04-04-2026 14:45
+P100,Account suddenly blocked without warning or explanation,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,04-04-2026 22:33
+P101,UPI transaction failed but money got deducted instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,05-04-2026 10:08
+P102,Received fake SMS asking to verify OTP urgently,Fraud,Negative,0.97,Fraud,Critical,TRUE,OTP scam detected,Escalate fraud team,05-04-2026 03:19
+P103,Mobile banking app works smoothly after update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app experience,Monitor only,05-04-2026 10:08
+P104,Credit card payment not updated in statement,Complaint,Negative,0.9,Loans,Medium,FALSE,Payment mismatch,Respond customer,05-04-2026 19:57
+P105,UPI service is down since morning in my area,Complaint,Negative,0.95,Payments,High,FALSE,Service outage,Escalate operations,03-04-2026 11:49
+P106,Customer support resolved my issue quickly and politely,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,06-04-2026 01:44
+P107,Someone tried to reset my net banking password without permission,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,06-04-2026 12:21
+P108,Loan process is okay but approval takes too long,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,06-04-2026 12:59
+P109,ATM withdrew money but cash was not dispensed,Complaint,Negative,0.94,Payments,High,FALSE,ATM failure issue,Escalate operations,06-04-2026 20:17
+P110,App crashes while making UPI payments repeatedly,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability,Escalate ops,02-04-2026 09:22
+P111,"Got cashback instantly on purchase, very happy",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward experience,Monitor only,07-04-2026 06:03
+P112,Fake call asking for CVV details immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,07-04-2026 15:42
+P113,Branch staff was very helpful and polite,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,07-04-2026 23:38
+P114,Transaction failed but amount was deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transaction issue,Escalate operations,08-04-2026 04:27
+P115,Loan interest is acceptable but processing is slow,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,08-04-2026 04:27
+P116,Suspicious email asking to verify bank account details,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,08-04-2026 13:55
+P117,Net banking UI is confusing compared to other banks,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX comparison feedback,Monitor,08-04-2026 17:31
+P118,UPI transfer failed but money got debited,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,09-04-2026 02:09
+P119,Festive offers are really good this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,09-04-2026 02:09
+P120,Account blocked suddenly without any explanation,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,09-04-2026 11:26
+P121,UPI payment failed but money deducted instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,09-04-2026 21:14
+P122,Received fake SMS asking for OTP verification immediately,Fraud,Negative,0.97,Fraud,Critical,TRUE,OTP scam detected,Escalate fraud team,10-04-2026 09:05
+P123,Mobile app is working much better after latest update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app feedback,Monitor only,10-04-2026 09:12
+P124,Credit card payment not reflecting in account statement,Complaint,Negative,0.9,Loans,Medium,FALSE,Billing issue,Respond customer,10-04-2026 09:18
+P125,UPI service completely down in my area since morning,Complaint,Negative,0.95,Payments,High,FALSE,Service outage,Escalate operations,10-04-2026 09:25
+P126,Customer care resolved my issue quickly and professionally,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,10-04-2026 09:41
+P127,Someone tried to reset my password without my permission,Fraud,Negative,0.97,Fraud,Critical,TRUE,Security threat detected,Escalate fraud team,10-04-2026 10:03
+P128,Loan approval process is okay but slower than expected,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral feedback,Monitor,10-04-2026 10:15
+P129,ATM withdrew money but cash was not dispensed,Complaint,Negative,0.94,Payments,High,FALSE,ATM failure issue,Escalate operations,10-04-2026 10:22
+P130,App keeps crashing during UPI transactions repeatedly,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability,Escalate ops,10-04-2026 10:37
+P131,"Got cashback instantly, very smooth experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive offer feedback,Monitor only,10-04-2026 11:08
+P132,Fake call asking for CVV number immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,10-04-2026 11:19
+P133,Branch staff was very polite and helpful,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,10-04-2026 11:27
+P134,Transaction failed but money got deducted from account,Complaint,Negative,0.94,Payments,High,FALSE,Transaction issue,Escalate operations,10-04-2026 12:02
+P135,Loan interest is fine but processing takes too long,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,10-04-2026 12:16
+P136,Suspicious email asking to verify bank account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,10-04-2026 12:45
+P137,Net banking interface is confusing compared to competitors,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback,Monitor,10-04-2026 13:05
+P138,UPI transfer failed but money was deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,10-04-2026 13:18
+P139,Festive offers are really attractive this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,10-04-2026 13:39
+P140,Account suddenly blocked without any explanation,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,10-04-2026 14:07
+P141,UPI payment failed but money was debited instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,10-04-2026 14:28
+P142,Received fake SMS asking to update KYC via urgent link,Fraud,Negative,0.97,Fraud,Critical,TRUE,Phishing attempt detected,Escalate fraud team,11-04-2026 15:11
+P143,Mobile banking app feels faster and more stable now,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive performance feedback,Monitor only,11-04-2026 15:49
+P144,Credit card payment not reflected even after 48 hours,Complaint,Negative,0.9,Loans,Medium,FALSE,Delayed payment issue,Respond customer,11-04-2026 16:06
+P145,UPI services are completely down since morning,Complaint,Negative,0.95,Payments,High,FALSE,Service outage reported,Escalate operations,11-04-2026 16:33
+P146,"Customer support resolved my issue in minutes, very happy",Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive support experience,Monitor only,10-04-2026 17:02
+P147,Someone attempted unauthorized password reset on my account,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,10-04-2026 09:02
+P148,Loan approval process is acceptable but slower than expected,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,10-04-2026 09:14
+P149,ATM deducted money but did not dispense cash,Complaint,Negative,0.94,Payments,High,FALSE,ATM transaction failure,Escalate operations,10-04-2026 09:29
+P150,App crashes frequently during UPI payments,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,10-04-2026 09:36
+P151,"Received instant cashback on transaction, great experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward feedback,Monitor only,10-04-2026 10:06
+P152,"Fake call asking for CVV details immediately, seems suspicious",Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,12-04-2026 10:17
+P153,Branch staff was very courteous and helpful during visit,Feedback,Positive,0.86,Customer Service,Low,FALSE,Positive branch feedback,Monitor only,12-04-2026 10:33
+P154,Transaction failed but amount was still deducted from account,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,10-04-2026 10:48
+P155,Loan interest rates are fine but approval takes too long,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,12-04-2026 11:04
+P156,Suspicious email asking to verify bank account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,10-04-2026 11:13
+P157,Net banking interface is not very user friendly compared to others,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX comparison feedback,Monitor,10-04-2026 11:26
+P158,UPI transfer failed but money got debited from account,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,10-04-2026 12:09
+P159,Festive offers this year are really attractive and useful,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,10-04-2026 12:21
+P160,Account suddenly blocked without any explanation or warning,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,10-04-2026 12:38
+P161,UPI payment failed but amount was deducted instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,10-04-2026 13:03
+P162,Received SMS asking to share OTP for account verification,Fraud,Negative,0.97,Fraud,Critical,TRUE,OTP scam detected,Escalate fraud team,10-04-2026 13:17
+P163,Mobile app performance has improved significantly after update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app feedback,Monitor only,10-04-2026 13:42
+P164,Credit card payment not updated in statement even after days,Complaint,Negative,0.9,Loans,Medium,FALSE,Billing mismatch issue,Respond customer,10-04-2026 14:11
+P165,UPI services are completely unavailable in my region,Complaint,Negative,0.95,Payments,High,FALSE,Service outage reported,Escalate operations,12-04-2026 14:25
+P166,Customer care resolved my issue very quickly and politely,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive support experience,Monitor only,10-04-2026 15:08
+P167,Someone tried to reset my password without authorization,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,10-04-2026 15:34
+P168,Loan approval process is fine but takes too long,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,12-04-2026 16:02
+P169,ATM deducted money but cash was not dispensed,Complaint,Negative,0.94,Payments,High,FALSE,ATM transaction issue,Escalate operations,10-04-2026 16:19
+P170,App crashes repeatedly during UPI transactions,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,10-04-2026 17:07
+P171,"Received cashback instantly, very smooth experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward feedback,Monitor only,11-04-2026 09:07
+P172,Fake call asking for CVV details immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,11-04-2026 09:21
+P173,Branch staff was very courteous and supportive,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,11-04-2026 09:44
+P174,Transaction failed but money was still deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,12-04-2026 19:36
+P175,Loan interest rates are acceptable but processing is slow,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,12-04-2026 20:36
+P176,Suspicious email asking to verify bank account urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,11-04-2026 10:18
+P177,Net banking interface is confusing compared to competitor banks,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback vs competitors,Monitor,11-04-2026 19:36
+P178,UPI transfer failed but money got debited from account,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,12-04-2026 10:36
+P179,Festive offers this year are very attractive and useful,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,11-04-2026 11:09
+P180,Account suddenly blocked without any explanation or warning,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,11-04-2026 11:22
+P181,Bank is offering guaranteed 15% returns on fixed deposits,Fraud,Negative,0.96,Marketing,Critical,TRUE,Potential mis-selling / false promise,Escalate compliance team,11-04-2026 19:22
+P182,Agent promised loan approval without credit check,Complaint,Negative,0.93,Loans,High,TRUE,Policy violation in lending,Escalate compliance team,11-04-2026 12:14
+P183,Received investment advice from bank employee via WhatsApp,Fraud,Negative,0.95,Fraud,Critical,TRUE,Unapproved financial advisory,Escalate compliance + legal,11-04-2026 12:41
+P184,UPI transaction processed without user consent notification,Complaint,Negative,0.94,Payments,Critical,TRUE,Unauthorized transaction flow,Escalate compliance + ops,11-04-2026 20:41
+P185,Bank staff asked for Aadhaar and OTP over phone,Fraud,Negative,0.97,Fraud,Critical,TRUE,Sensitive data misuse risk,Escalate fraud + compliance,11-04-2026 13:03
+P186,Hidden charges not disclosed during credit card signup,Complaint,Negative,0.92,Loans,High,TRUE,Non-transparent fee disclosure,Escalate compliance team,11-04-2026 13:27
+P187,Loan EMI increased without prior notice,Complaint,Negative,0.93,Loans,Critical,TRUE,Unapproved EMI change complaint,Escalate compliance team,12-04-2026 13:27
+P188,Bank advertising 'zero fees' but charges applied later,Complaint,Negative,0.94,Marketing,Critical,TRUE,Misleading advertising claim,Escalate compliance + legal,12-04-2026 09:06
+P189,Account opened without explicit consent after KYC visit,Fraud,Negative,0.98,Fraud,Critical,TRUE,Consent violation in onboarding,Escalate compliance + audit,12-04-2026 09:19
+P190,Bank app sharing user data with third-party without consent,Complaint,Negative,0.95,Digital Banking,Critical,TRUE,Data privacy concern,Escalate compliance + legal,12-04-2026 09:35
+P191,Loan approval mentioned 'pre-approved' but got rejected later,Complaint,Negative,0.9,Loans,High,TRUE,Misleading loan communication,Escalate compliance team,10-04-2026 19:35
+P192,Bank charges for failed transaction without refund,Complaint,Negative,0.93,Payments,High,TRUE,Improper fee deduction,Escalate compliance team,12-04-2026 10:11
+P193,Employee shared internal interest rates in public forum,Fraud,Negative,0.92,Fraud,Critical,TRUE,Internal data exposure risk,Escalate compliance + security,12-04-2026 10:28
+P194,Bank denying refund without proper explanation for failed UPI,Complaint,Negative,0.91,Payments,High,TRUE,Dispute resolution failure,Escalate compliance + ops,12-04-2026 13:05
+P195,Misleading SMS says account will close unless immediate payment done,Fraud,Negative,0.97,Fraud,Critical,TRUE,Scam impersonating bank,Escalate fraud team,10-04-2026 18:35
+P196,Bank representative forced insurance product during loan approval,Complaint,Negative,0.92,Loans,Critical,TRUE,Unethical cross-selling,Escalate compliance team,12-04-2026 11:08
+P197,App shows incorrect interest rate compared to official statement,Complaint,Negative,0.89,Digital Banking,High,TRUE,Data inconsistency issue,Escalate compliance + tech,12-04-2026 11:23
+P198,Bank blocked account after complaint without notice or reason,Complaint,Negative,0.94,Customer Service,Critical,TRUE,Unjustified account restriction,Escalate compliance team,10-04-2026 11:23
+P199,Agent promised cashback not mentioned in official terms,Complaint,Negative,0.9,Marketing,High,TRUE,Misleading promotional promise,Escalate compliance team,12-04-2026 12:16
+P200,Bank collecting biometric data without clear consent notice,Fraud,Negative,0.96,Fraud,Critical,TRUE,Privacy compliance breach risk,Escalate compliance + legal,12-04-2026 12:39
+P201,UPI payment failed but amount was debited instantly,Complaint,Negative,0.93,Payments,High,FALSE,Debit without success,Escalate operations,12-04-2026 13:05
+P202,Received fake SMS asking for OTP verification urgently,Fraud,Negative,0.97,Fraud,Critical,TRUE,OTP scam detected,Escalate fraud team,12-04-2026 13:05
+P203,Bank promised instant loan approval but delayed for weeks,Complaint,Negative,0.92,Loans,High,TRUE,Misleading service promise,Escalate compliance team,12-04-2026 13:31
+P204,App performance has improved significantly after update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app feedback,Monitor only,12-04-2026 13:52
+P205,Credit card payment not updated even after 3 days,Complaint,Negative,0.9,Loans,Medium,FALSE,Billing mismatch issue,Respond customer,01-04-2026 00:12
+P206,Bank agent forced me to buy insurance with loan,Complaint,Negative,0.93,Loans,Critical,TRUE,Forced product bundling,Escalate compliance team,01-04-2026 08:34
+P207,Customer care resolved my issue quickly and politely,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,01-04-2026 21:47
+P208,Someone tried to reset my password without authorization,Fraud,Negative,0.97,Fraud,Critical,TRUE,Account security threat,Escalate fraud team,12-04-2026 13:05
+P209,Loan approval process is acceptable but slower than expected,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,02-04-2026 02:15
+P210,ATM deducted money but cash was not dispensed,Complaint,Negative,0.94,Payments,High,FALSE,ATM transaction failure,Escalate operations,02-04-2026 09:22
+P211,App crashes repeatedly during UPI transactions,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,02-04-2026 09:58
+P212,"Received cashback instantly, very smooth experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward feedback,Monitor only,02-04-2026 18:36
+P213,Fake call asking for CVV details immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam,Escalate fraud team,12-04-2026 13:05
+P214,Branch staff was very courteous and helpful,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,03-04-2026 05:11
+P215,Transaction failed but money was still deducted,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,03-04-2026 11:49
+P216,Loan interest rates are fine but processing is slow,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,03-04-2026 23:05
+P217,Suspicious email asking to verify bank account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,10-04-2026 19:35
+P218,Net banking interface is confusing compared to competitors,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback vs competitors,Monitor,04-04-2026 07:28
+P219,UPI transfer failed but money got debited from account,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,04-04-2026 14:16
+P220,Festive offers are really attractive and useful this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,04-04-2026 14:45
+P221,Account suddenly blocked without any explanation or warning,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,04-04-2026 22:33
+P222,Bank deducted charges without informing me properly,Complaint,Negative,0.92,Payments,High,TRUE,Non-transparent charges,Escalate compliance team,05-04-2026 10:08
+P223,Employee shared internal rate details on social media,Fraud,Negative,0.93,Fraud,Critical,TRUE,Confidential data exposure,Escalate compliance + security,05-04-2026 03:19
+P224,Bank app shows incorrect balance compared to ATM receipt,Complaint,Negative,0.9,Digital Banking,High,TRUE,Data inconsistency issue,Escalate ops + tech,05-04-2026 10:08
+P225,Loan EMI increased without prior customer notification,Complaint,Negative,0.94,Loans,Critical,TRUE,Unnotified EMI change,Escalate compliance team,05-04-2026 19:57
+P226,UPI payment failed but money deducted instantly again,Complaint,Negative,0.93,Payments,High,FALSE,Repeated debit failure issue,Escalate operations,03-04-2026 11:49
+P227,Received fake WhatsApp message asking for KYC update link,Fraud,Negative,0.97,Fraud,Critical,TRUE,Social media phishing attempt,Escalate fraud team,06-04-2026 01:44
+P228,Loan agent promised approval within 5 minutes but not delivered,Complaint,Negative,0.92,Loans,High,TRUE,False promise in service,Escalate compliance team,06-04-2026 12:21
+P229,Mobile app is now working faster after the latest update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app improvement,Monitor only,06-04-2026 12:59
+P230,Credit card payment not showing in statement after multiple days,Complaint,Negative,0.9,Loans,Medium,FALSE,Delayed billing update,Respond customer,06-04-2026 20:17
+P231,Bank forced insurance add-on during personal loan application,Complaint,Negative,0.94,Loans,Critical,TRUE,Forced product bundling complaint,Escalate compliance team,02-04-2026 09:22
+P232,Customer support resolved issue politely and efficiently,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,07-04-2026 06:03
+P233,Unauthorized login attempt detected from unknown device,Fraud,Negative,0.97,Fraud,Critical,TRUE,Security breach attempt detected,Escalate fraud team,07-04-2026 15:42
+P234,Loan processing is okay but slower than expected timeline,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan experience,Monitor,07-04-2026 23:38
+P235,ATM deducted money but did not dispense cash again,Complaint,Negative,0.94,Payments,High,FALSE,ATM failure issue repeated,Escalate operations,08-04-2026 04:27
+P236,App keeps crashing during every UPI transaction attempt,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,08-04-2026 04:27
+P237,"Received instant cashback, very smooth and satisfying experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward experience,Monitor only,08-04-2026 13:55
+P238,Fake call asking for OTP and CVV immediately to verify account,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam attempt,Escalate fraud team,08-04-2026 17:31
+P239,Branch staff was very polite and helpful during visit today,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch service feedback,Monitor only,09-04-2026 04:27
+P240,Transaction failed but money was still deducted from account,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,09-04-2026 04:27
+P241,Loan interest rates are acceptable but approval takes too long,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,06-04-2026 13:55
+P242,Suspicious email asking to verify bank account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,01-04-2026 17:31
+P243,Net banking UI is confusing compared to competitor banks,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback vs competitors,Monitor,11-04-2026 15:49
+P244,UPI transfer failed but amount got debited from account,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,11-04-2026 16:06
+P245,Festive offers are really attractive and useful this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,11-04-2026 16:33
+P246,Account suddenly blocked without any explanation or warning again,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,10-04-2026 17:02
+P247,Bank deducted charges without proper explanation or notification,Complaint,Negative,0.92,Payments,High,TRUE,Non-transparent charges issue,Escalate compliance team,10-04-2026 09:02
+P248,Employee accidentally shared internal rate sheet on social media,Fraud,Negative,0.93,Fraud,Critical,TRUE,Confidential data exposure,Escalate compliance + security,10-04-2026 09:14
+P249,Bank app shows incorrect balance compared to actual transaction history,Complaint,Negative,0.9,Digital Banking,High,TRUE,Data inconsistency issue,Escalate ops + tech,10-04-2026 09:29
+P250,Loan EMI increased without informing customer beforehand,Complaint,Negative,0.94,Loans,Critical,TRUE,Unnotified EMI change complaint,Escalate compliance team,10-04-2026 09:36
+P251,UPI payment failed but amount was deducted instantly again today,Complaint,Negative,0.93,Payments,High,FALSE,Repeated debit failure issue,Escalate operations,10-04-2026 10:06
+P252,Fake WhatsApp message asking to verify KYC via suspicious link,Fraud,Negative,0.97,Fraud,Critical,TRUE,Social media phishing attempt,Escalate fraud team,12-04-2026 10:17
+P253,Loan agent promised instant approval without documentation,Complaint,Negative,0.92,Loans,High,TRUE,False service promise,Escalate compliance team,12-04-2026 10:33
+P254,Mobile banking app feels much more stable after latest update,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app improvement,Monitor only,10-04-2026 10:48
+P255,Credit card payment still not reflected after multiple days,Complaint,Negative,0.9,Loans,Medium,FALSE,Delayed payment issue,Respond customer,12-04-2026 11:04
+P256,Bank forced insurance product while approving loan application,Complaint,Negative,0.94,Loans,Critical,TRUE,Forced bundling issue,Escalate compliance team,10-04-2026 11:13
+P257,Customer care resolved my issue quickly and professionally,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,10-04-2026 11:26
+P258,Unauthorized login attempt detected from foreign IP address,Fraud,Negative,0.97,Fraud,Critical,TRUE,Security breach attempt detected,Escalate fraud team,10-04-2026 12:09
+P259,Loan approval is okay but processing is slower than expected,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,10-04-2026 12:21
+P260,ATM deducted money but cash was not dispensed again today,Complaint,Negative,0.94,Payments,High,FALSE,ATM failure issue,Escalate operations,10-04-2026 12:38
+P261,App crashes frequently during UPI payment attempts,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,10-04-2026 13:03
+P262,"Received instant cashback after transaction, very satisfying",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward experience,Monitor only,10-04-2026 13:17
+P263,Fake call asking for OTP and CVV to verify account immediately,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam attempt,Escalate fraud team,10-04-2026 13:42
+P264,Branch staff was extremely polite and helpful during visit,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,10-04-2026 14:11
+P265,Transaction failed but money was still deducted from account again,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,12-04-2026 14:25
+P266,Loan interest rates are fine but approval takes too long,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,10-04-2026 15:08
+P267,Suspicious email asking to verify account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,10-04-2026 15:34
+P268,Net banking UI is confusing compared to other banks,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback vs competitors,Monitor,12-04-2026 16:02
+P269,UPI transfer failed but amount got debited from account again,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,10-04-2026 16:19
+P270,Festive offers are very attractive and useful this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,10-04-2026 17:07
+P271,Account suddenly blocked without any explanation or warning again,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,11-04-2026 09:07
+P272,Bank deducted charges without informing properly or clearly,Complaint,Negative,0.92,Payments,High,TRUE,Non-transparent charges issue,Escalate compliance team,11-04-2026 09:21
+P273,Employee accidentally shared internal pricing sheet on social media,Fraud,Negative,0.93,Fraud,Critical,TRUE,Confidential data exposure,Escalate compliance + security,11-04-2026 09:44
+P274,Bank app shows incorrect balance compared to transaction history,Complaint,Negative,0.9,Digital Banking,High,TRUE,Data inconsistency issue,Escalate ops + tech,12-04-2026 19:36
+P275,Loan EMI increased without any prior customer notification,Complaint,Negative,0.94,Loans,Critical,TRUE,Unnotified EMI change complaint,Escalate compliance team,01-04-2026 00:12
+P276,UPI payment failed but money was debited instantly again,Complaint,Negative,0.93,Payments,High,FALSE,Repeated debit failure issue,Escalate operations,01-04-2026 08:34
+P277,Fake SMS asking to update KYC using urgent verification link,Fraud,Negative,0.97,Fraud,Critical,TRUE,Phishing attempt detected,Escalate fraud team,01-04-2026 21:47
+P278,Loan agent promised instant approval but nothing happened,Complaint,Negative,0.92,Loans,High,TRUE,False service promise,Escalate compliance team,12-04-2026 13:05
+P279,Mobile banking app performance has improved a lot recently,Feedback,Positive,0.88,Digital Banking,Low,FALSE,Positive app feedback,Monitor only,02-04-2026 02:15
+P280,Credit card payment still not updated in statement after 5 days,Complaint,Negative,0.9,Loans,Medium,FALSE,Delayed payment issue,Respond customer,02-04-2026 09:22
+P281,Bank forced insurance product during loan approval process,Complaint,Negative,0.94,Loans,Critical,TRUE,Forced bundling complaint,Escalate compliance team,02-04-2026 09:58
+P282,Customer care resolved my issue quickly and politely,Feedback,Positive,0.87,Customer Service,Low,FALSE,Positive service experience,Monitor only,02-04-2026 18:36
+P283,Unauthorized login attempt detected from unknown device location,Fraud,Negative,0.97,Fraud,Critical,TRUE,Security breach attempt detected,Escalate fraud team,12-04-2026 13:05
+P284,Loan approval process is okay but slower than expected timeline,Feedback,Neutral,0.76,Loans,Medium,FALSE,Neutral loan feedback,Monitor,03-04-2026 05:11
+P285,ATM deducted money but cash was not dispensed again,Complaint,Negative,0.94,Payments,High,FALSE,ATM failure issue,Escalate operations,03-04-2026 11:49
+P286,App crashes repeatedly during UPI payment attempts,Complaint,Negative,0.92,Digital Banking,High,FALSE,App instability issue,Escalate ops,03-04-2026 23:05
+P287,"Received instant cashback after transaction, very smooth experience",Promotion,Positive,0.9,Marketing,Low,FALSE,Positive reward experience,Monitor only,10-04-2026 19:35
+P288,Fake call asking for OTP and CVV immediately to verify account,Fraud,Negative,0.96,Fraud,Critical,TRUE,Sensitive data scam attempt,Escalate fraud team,04-04-2026 07:28
+P289,Branch staff was very polite and helpful during my visit,Feedback,Positive,0.86,Customer Service,Low,FALSE,Good branch feedback,Monitor only,04-04-2026 14:16
+P290,Transaction failed but money was still deducted from account again,Complaint,Negative,0.94,Payments,High,FALSE,Transaction mismatch issue,Escalate operations,04-04-2026 14:45
+P291,Loan interest rates are fine but approval takes too long,Feedback,Neutral,0.75,Loans,Medium,FALSE,Processing delay feedback,Monitor,04-04-2026 22:33
+P292,Suspicious email asking to verify bank account details urgently,Fraud,Negative,0.96,Fraud,Critical,TRUE,Phishing email detected,Escalate fraud team,05-04-2026 10:08
+P293,Net banking interface is confusing compared to other banks,Feedback,Neutral,0.73,Digital Banking,Medium,FALSE,UX feedback vs competitors,Monitor,05-04-2026 03:19
+P294,UPI transfer failed but amount got debited from account again,Complaint,Negative,0.94,Payments,High,FALSE,Transfer failure issue,Escalate operations,05-04-2026 10:08
+P295,Festive offers are very attractive and useful this year,Promotion,Positive,0.89,Marketing,Low,FALSE,Positive campaign response,Monitor only,05-04-2026 19:57
+P296,Account suddenly blocked without any explanation or warning again,Complaint,Negative,0.95,Customer Service,Critical,TRUE,Unexpected account block,Escalate compliance team,03-04-2026 11:49
+P297,Bank deducted charges without informing properly or clearly,Complaint,Negative,0.92,Payments,High,TRUE,Non-transparent charges issue,Escalate compliance team,06-04-2026 01:44
+P298,Employee accidentally shared internal pricing sheet on social media,Fraud,Negative,0.93,Fraud,Critical,TRUE,Confidential data exposure,Escalate compliance + security,06-04-2026 12:21
+P299,Bank app shows incorrect balance compared to transaction history,Complaint,Negative,0.9,Digital Banking,High,TRUE,Data inconsistency issue,Escalate ops + tech,06-04-2026 12:59
+P300,Loan EMI increased without any prior customer notification,Complaint,Negative,0.94,Loans,Critical,TRUE,Unnotified EMI change complaint,Escalate compliance team,06-04-2026 20:17

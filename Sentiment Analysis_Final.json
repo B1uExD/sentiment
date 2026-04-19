@@ -1,0 +1,977 @@
+{
+  "name": "Sentiment Analysis_Final",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        896
+      ],
+      "id": "6d7a7468-84b3-4950-bd4a-40b69efb7180",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1920,
+        1056
+      ],
+      "id": "12872ebc-8f88-4f3c-ad36-7bd698e3d98d",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        672,
+        912
+      ],
+      "id": "b4799838-c8ec-455b-9734-8ef8609e504e",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c2b7af64-e81c-4269-93eb-bdc5eecc08d5",
+              "name": "content",
+              "value": "={{ $json.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1248,
+        816
+      ],
+      "id": "208b7a8a-9e36-47f0-9452-4bffd7d4abf9",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/home/node/files/sent_datatest.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        896
+      ],
+      "id": "a4cb25fb-1d6a-4490-bc0d-5b13e9d6c528",
+      "name": "Read/Write Files from Disk2",
+      "alwaysOutputData": true,
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "options": {
+          "headerRow": true,
+          "rawData": false
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        896
+      ],
+      "id": "1c485deb-bc05-4aa4-9a02-f2859c7feb4d",
+      "name": "Extract from File2"
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "data_sentiment",
+          "mode": "list",
+          "cachedResultName": "data_sentiment"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "post_id": "={{ $json.post_id }}",
+            "posts": "={{ $json.post }}",
+            "post_type": "={{ $json.post_type }}",
+            "sentiment_label": "={{ $json.sentiment_label }}",
+            "sentiment_confidence": "={{ $json.sentiment_confidence }}",
+            "category": "={{ $json.category }}",
+            "severity_level": "={{ $json.severity_level }}",
+            "compliance_flagged": "={{ $json.compliance_flag }}",
+            "compliance_reason": "={{ $json.compliance_reason }}",
+            "regulatory_violation": "={{ $json.regulatory_violation }}",
+            "fraud_risk": "={{ $json.fraud_risk }}",
+            "summary": "={{ $json.summary }}",
+            "recommended_action": "=",
+            "created_at": "={{ DateTime.fromFormat($json.created_at, 'dd-MM-yyyy HH:mm').toFormat('yyyy-MM-dd HH:mm:ss') }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "post_id",
+              "displayName": "post_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "posts",
+              "displayName": "posts",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "post_type",
+              "displayName": "post_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sentiment_label",
+              "displayName": "sentiment_label",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sentiment_confidence",
+              "displayName": "sentiment_confidence",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "customer_satisfaction",
+              "displayName": "customer_satisfaction",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "category",
+              "displayName": "category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "severity_level",
+              "displayName": "severity_level",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "compliance_flagged",
+              "displayName": "compliance_flagged",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "compliance_reason",
+              "displayName": "compliance_reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service_failure",
+              "displayName": "service_failure",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "regulatory_violation",
+              "displayName": "regulatory_violation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fraud_risk",
+              "displayName": "fraud_risk",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "competitive_weakness",
+              "displayName": "competitive_weakness",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "recommended_action",
+              "displayName": "recommended_action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1248,
+        528
+      ],
+      "id": "f5f15cb0-3fcb-46dc-ae38-dfb2e9b65cca",
+      "name": "Insert rows in a table",
+      "credentials": {
+        "postgres": {
+          "id": "eu3yp4OxtAQcji8s",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "html": "{{$json.html}}"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1472,
+        336
+      ],
+      "id": "02031822-91a0-4807-ba60-67d095a5a122",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gemma3:1b",
+          "mode": "list",
+          "cachedResultName": "gemma3:1b"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.post }}"
+            }
+          ]
+        },
+        "options": {
+          "system": "You are an AI-powered Banking Social Media Risk Intelligence System.\n\nYour task is to analyze a single social media post and return structured insights.\n\nABSOLUTE OUTPUT CONTRACT (HIGHEST PRIORITY)\nOutput MUST be valid JSON only\nOutput MUST match the schema EXACTLY\nDo NOT output:\nexplanations\ncomments\nnotes\nmarkdown\nDo NOT add new fields\nDo NOT remove any fields\nDo NOT rename any fields\nDo NOT reorder nested structure\nDo NOT use null values\nDo NOT leave any object empty {}\nSTRICT OBJECT COMPLETENESS RULE\nEvery object MUST contain ALL its defined fields\nPartial objects are STRICTLY FORBIDDEN\nINVALID EXAMPLE (DO NOT DO THIS)\n\"compliance_flag\": {}\nINVALID EXAMPLE\n\"compliance_flag\": {\n  \"flagged\": true\n}\nVALID (MANDATORY FORMAT)\n\"compliance_flag\": {\n  \"flagged\": true,\n  \"reason\": \"fraud risk detected\"\n}\nBOOLEAN ENFORCEMENT\nONLY allowed values:\n- true\n- false\nNEVER USE:\n- \"true\", \"false\"\n- Yes / No\n- 1 / 0\nSTRING FIELD RULES\n-All string fields MUST be non-empty\nEXCEPTION:\ncompliance_flag.reason → may be \"\" ONLY if flagged = false\nARRAY RULES\n-Arrays MUST exist\n-Arrays MAY be empty: []\n-Do NOT use null\nENUM RULES (STRICT MATCH)\n\nValues MUST match EXACTLY (case-sensitive). No variation allowed.\n\nINPUT\n\nA single social media post (plain text)\n\nOUTPUT FORMAT (DO NOT MODIFY)\n\n{\n\"post_type\": \"\",\n\"language\": \"\",\n\"intent\": \"\",\n\"sentiment\": {\n\"label\": \"\",\n\"confidence\": 0.0\n},\n\"sentiment_score\": 0.0,\n\"category\": \"\",\n\"topic\": \"\",\n\"severity_level\": \"\",\n\"risk_score\": 0,\n\"compliance_flag\": {\n\"flagged\": false,\n\"reason\": \"\"\n},\n\"risk_indicators\": {\n\"service_failure\": false,\n\"regulatory_violation\": false,\n\"fraud_risk\": false,\n\"reputational_damage\": false,\n\"competitive_weakness\": false\n},\n\"key_entities\": {\n\"banks\": [],\n\"products\": [],\n\"competitors\": []\n},\n\"summary\": \"\",\n\"recommended_action\": \"\",\n\"escalation_required\": false\n}\n\nFIELD CONSTRAINTS\npost_type (choose ONE)\nComplaint\nInquiry\nFeedback\nPromotion\nSuspicious/Fraud-related\nlanguage (choose ONE)\nEnglish\nHindi\nBengali\nMixed\nintent (choose ONE)\nComplaint\nInformation request\nFraud report\nPraise\nMarketing engagement\nsentiment.label (choose ONE)\nPositive\nNeutral\nNegative\nsentiment.confidence\n0.0 to 1.0\nMax 2 decimal places\nsentiment_score\n-1.0 to 1.0\nMUST follow:\nPositive → 0.3 to 1.0\nNeutral → -0.2 to 0.2\nNegative → -1.0 to -0.3\ncategory (choose ONE)\nCustomer Service\nDigital Banking\nPayments/Transactions\nLoans/Credit Cards\nFraud/Security\nMarketing/Offers\nGeneral Feedback\nOther\ntopic\n2–5 words ONLY\nNo punctuation at end\nseverity_level (choose ONE)\nLow\nMedium\nHigh\nCritical\nrisk_score\nInteger ONLY\n0–100\ncompliance_flag\nflagged\ntrue IF:\nfraud_risk = true OR\nregulatory_violation = true\nreason\nMUST be non-empty if flagged = true\nMUST be \"\" if flagged = false\nrisk_indicators (ALL REQUIRED — NO OMISSION)\nservice_failure\nregulatory_violation\nfraud_risk\nreputational_damage\ncompetitive_weakness\n\nEach MUST be either true or false\n\nkey_entities (ALL ARRAYS REQUIRED)\nbanks\nproducts\ncompetitors\nsummary\nMax 20 words\nMUST NOT be empty\nrecommended_action (choose ONE)\nRespond to customer\nEscalate to customer support\nEscalate to operations team\nEscalate to fraud investigation team\nEscalate to compliance team\nMonitor only\nescalation_required\n\nSet true if ANY:\n\nseverity_level = High OR Critical\nfraud_risk = true\ncompliance_flag.flagged = true\n\nElse false\n\nDETERMINISTIC LOGIC\nSeverity\nLow → no risk indicators + positive/neutral\nMedium → complaint only\nHigh → negative + service_failure OR reputational_damage\nCritical → fraud_risk OR regulatory_violation\nRisk Score\n\nStart at 0:\n\nNegative sentiment → +30\nEach true risk indicator → +15\nfraud_risk → minimum = 70\nregulatory_violation → minimum = 80\nurgency words → +10\n\nCap at 100\n\nFINAL HARD CONSTRAINTS\nNEVER output empty objects {}\nNEVER output partial objects\nNEVER skip nested fields\nNEVER invent new schema structure\nNEVER leave required fields blank\nNEVER break JSON format\n\nIf unable to determine a value:\n→ choose the closest valid option (DO NOT leave empty)"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.ollama",
+      "typeVersion": 1,
+      "position": [
+        896,
+        816
+      ],
+      "id": "ae7cabec-d58b-4105-879e-da8bddf47915",
+      "name": "AI Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "2xnfJRZqglshQLUL",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1472,
+        528
+      ],
+      "id": "ef739586-174d-4fad-a6b4-08c61ac63e0e",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get input\nconst input = items[0].json.content;\n\n// ----------------------\n// 1. Extract JSON block\n// ----------------------\nconst match = input.match(/```json\\s*([\\s\\S]*?)\\s*```/);\n\nif (!match) {\n\treturn [{ json: { error: \"No JSON block found\" } }];\n}\n\nlet rawJson = match[1];\n\n// ----------------------\n// 2. Clean JSON\n// ----------------------\nlet cleaned = rawJson\n\t.replace(/,\\s*}/g, '}')   // remove trailing commas\n\t.replace(/,\\s*]/g, ']');\n\n// ----------------------\n// 3. FIX BRACKET IMBALANCE (IMPORTANT)\n// ----------------------\nlet open = (cleaned.match(/{/g) || []).length;\nlet close = (cleaned.match(/}/g) || []).length;\n\n// remove extra closing braces\nwhile (close > open) {\n\tcleaned = cleaned.replace(/}\\s*$/, '');\n\tclose--;\n}\n\n// add missing closing braces\nwhile (open > close) {\n\tcleaned += '}';\n\tclose++;\n}\n\n// ----------------------\n// 4. Parse safely\n// ----------------------\nlet parsed;\ntry {\n\tparsed = JSON.parse(cleaned);\n} catch (e) {\n\t// LAST fallback: return raw but still usable\n\treturn [\n\t\t{\n\t\t\tjson: {\n\t\t\t\traw_text: input,\n\t\t\t\tnote: \"Could not fully parse JSON, returning raw text\"\n\t\t\t}\n\t\t}\n\t];\n}\n\n// ----------------------\n// 5. Normalize structure\n// ----------------------\nconst sentiment = parsed.sentiment || {};\nconst compliance = parsed.compliance_flag || {};\nconst risk = parsed.risk_indicators || {};\nconst entities = parsed.key_entities || {};\n\n// ----------------------\n// 6. Final clean output\n// ----------------------\nconst result = {\n\tpost_type: parsed.post_type || null,\n\tlanguage: parsed.language || null,\n\tintent: parsed.intent || null,\n\n\tsentiment_label: sentiment.label || null,\n\tsentiment_confidence: sentiment.confidence || null,\n\tsentiment_score: parsed.sentiment_score || null,\n\n\tcategory: parsed.category || null,\n\ttopic: parsed.topic || null,\n\tseverity_level: parsed.severity_level || null,\n\n\trisk_score: parsed.risk_score || null,\n\n\tcompliance_flag: compliance.flagged ?? compliance ?? null,\n\tcompliance_reason: compliance.reason || null,\n\n\tservice_failure: risk.service_failure ?? null,\n\tregulatory_violation: risk.regulatory_violation ?? null,\n\tfraud_risk: risk.fraud_risk ?? null,\n\treputational_damage: risk.reputational_damage ?? null,\n\tcompetitive_weakness: risk.competitive_weakness ?? null,\n\n\t// handle both array + object formats\n\tkey_entities: Array.isArray(entities)\n\t\t? entities\n\t\t: [\n\t\t\t...(entities.banks || []),\n\t\t\t...(entities.products || []),\n\t\t\t...(entities.competitors || [])\n\t\t],\n\n\tsummary: parsed.summary || null,\n\trecommended_action: parsed.recommended_action || null,\n\tescalation_required: parsed.escalation_required ?? null\n};\n\n// ----------------------\n// 7. Return usable output\n// ----------------------\nreturn [\n\t{\n\t\tjson: result\n\t}\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1488,
+        896
+      ],
+      "id": "6c58fa6f-29f7-4606-94da-6d94891a5076",
+      "name": "Code in JavaScript - Gemma3:1b"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get input string\nconst input = items[0].json.content;\n\nlet parsed;\n\n// ----------------------\n// 1. Parse JSON safely\n// ----------------------\ntry {\n\tparsed = JSON.parse(input);\n} catch (e) {\n\treturn [\n\t\t{\n\t\t\tjson: {\n\t\t\t\terror: \"Invalid JSON\",\n\t\t\t\traw: input\n\t\t\t}\n\t\t}\n\t];\n}\n\n// ----------------------\n// 2. Extract nested fields\n// ----------------------\nconst sentiment = parsed.sentiment || {};\nconst compliance = parsed.compliance_flag || {};\nconst risk = parsed.risk_indicators || {};\nconst entities = parsed.key_entities || {};\n\n// ----------------------\n// 3. Normalize output\n// ----------------------\nconst result = {\n\tpost_type: parsed.post_type || null,\n\tlanguage: parsed.language || null,\n\tintent: parsed.intent || null,\n\n\tsentiment_label: sentiment.label || null,\n\tsentiment_confidence: sentiment.confidence || null,\n\tsentiment_score: parsed.sentiment_score || null,\n\n\tcategory: parsed.category || null,\n\ttopic: parsed.topic || null,\n\tseverity_level: parsed.severity_level || null,\n\n\trisk_score: parsed.risk_score || null,\n\n\tcompliance_flag: compliance.flagged ?? null,\n\tcompliance_reason: compliance.reason || null,\n\n\tservice_failure: risk.service_failure ?? null,\n\tregulatory_violation: risk.regulatory_violation ?? null,\n\tfraud_risk: risk.fraud_risk ?? null,\n\treputational_damage: risk.reputational_damage ?? null,\n\tcompetitive_weakness: risk.competitive_weakness ?? null,\n\n\t// Flatten entities\n\tkey_entities: [\n\t\t...(entities.banks || []),\n\t\t...(entities.products || []),\n\t\t...(entities.competitors || [])\n\t],\n\n\tsummary: parsed.summary || null,\n\trecommended_action: parsed.recommended_action || null,\n\tescalation_required: parsed.escalation_required ?? null\n};\n\n// ----------------------\n// 4. Return n8n format\n// ----------------------\nreturn [\n\t{\n\t\tjson: result\n\t}\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2304,
+        832
+      ],
+      "id": "9f27476b-e8f5-4f2c-b3b8-1af64b42c27a",
+      "name": "Code in JavaScript - Qwen3:1.7b"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "76d3082e-f611-47be-be79-2c7a73497e6b",
+              "name": "post_type",
+              "value": "={{ $json.post_type }}",
+              "type": "string"
+            },
+            {
+              "id": "c68ea6bc-45d4-4d37-9f15-4cc169d5e4fb",
+              "name": "language",
+              "value": "={{ $json.language }}",
+              "type": "string"
+            },
+            {
+              "id": "2d047dc7-0771-4f2e-94ae-dc9d6bfef509",
+              "name": "intent",
+              "value": "={{ $json.intent }}",
+              "type": "string"
+            },
+            {
+              "id": "9f1f3d69-9bbb-4e60-a1e2-c2d75d784998",
+              "name": "sentiment_label",
+              "value": "={{ $json.sentiment_label }}",
+              "type": "string"
+            },
+            {
+              "id": "9e534fff-5fce-402a-920d-ea3c875c0c28",
+              "name": "sentiment_confidence",
+              "value": "={{ $json.sentiment_confidence }}",
+              "type": "number"
+            },
+            {
+              "id": "b4648928-8a37-4b70-ba45-89f0e4555810",
+              "name": "sentiment_score",
+              "value": "={{ $json.sentiment_score }}",
+              "type": "number"
+            },
+            {
+              "id": "d2541bb6-97a2-4625-b60e-0762afc1f72c",
+              "name": "category",
+              "value": "={{ $json.category }}",
+              "type": "string"
+            },
+            {
+              "id": "e370068e-74bb-4752-8447-93f9534f27a1",
+              "name": "topic",
+              "value": "={{ $json.topic }}",
+              "type": "string"
+            },
+            {
+              "id": "f4c04174-b78b-45b9-adf1-234212bc06c1",
+              "name": "severity_level",
+              "value": "={{ $json.severity_level }}",
+              "type": "string"
+            },
+            {
+              "id": "17901618-0b03-4ecc-a134-60b2293516b9",
+              "name": "risk_score",
+              "value": "={{ $json.risk_score }}",
+              "type": "number"
+            },
+            {
+              "id": "7477f2c0-ca1a-4f09-b1bc-01f4d8037e22",
+              "name": "compliance_flag",
+              "value": "={{ $json.compliance_flag }}",
+              "type": "boolean"
+            },
+            {
+              "id": "c6285d51-58bd-4dfc-afb0-80a4a35b4e7b",
+              "name": "compliance_reason",
+              "value": "={{ $json.compliance_reason }}",
+              "type": "string"
+            },
+            {
+              "id": "04fabf0e-a80d-49a8-8b20-155ab7e40d64",
+              "name": "service_failure",
+              "value": "={{ $json.service_failure }}",
+              "type": "boolean"
+            },
+            {
+              "id": "9debf847-c3ba-40c8-a7e2-71b641cff500",
+              "name": "regulatory_violation",
+              "value": "={{ $json.regulatory_violation }}",
+              "type": "boolean"
+            },
+            {
+              "id": "d0dc3eb9-d5fa-4010-a9f2-3b29eaf5490e",
+              "name": "fraud_risk",
+              "value": "={{ $json.fraud_risk }}",
+              "type": "string"
+            },
+            {
+              "id": "09414cf0-ed74-4972-9bfe-c5734287749d",
+              "name": "summary",
+              "value": "={{ $json.summary }}",
+              "type": "string"
+            },
+            {
+              "id": "70df33a4-329b-4c40-aea5-0f4e4a685a8e",
+              "name": "recommended_action",
+              "value": "={{ $json.recommended_action }}",
+              "type": "string"
+            },
+            {
+              "id": "c83d3c30-41f0-4210-a103-237878a00160",
+              "name": "escalation_required",
+              "value": "={{ $json.escalation_required }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2528,
+        832
+      ],
+      "id": "e1f3c838-f496-46b1-9859-27b528e3ef52",
+      "name": "Edit Fields - Qwen3:1.7b"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "76d3082e-f611-47be-be79-2c7a73497e6b",
+              "name": "post_type",
+              "value": "={{ $json.post_type }}",
+              "type": "string"
+            },
+            {
+              "id": "c68ea6bc-45d4-4d37-9f15-4cc169d5e4fb",
+              "name": "language",
+              "value": "={{ $json.language }}",
+              "type": "string"
+            },
+            {
+              "id": "2d047dc7-0771-4f2e-94ae-dc9d6bfef509",
+              "name": "intent",
+              "value": "={{ $json.intent }}",
+              "type": "string"
+            },
+            {
+              "id": "9f1f3d69-9bbb-4e60-a1e2-c2d75d784998",
+              "name": "sentiment_label",
+              "value": "={{ $json.sentiment_label }}",
+              "type": "string"
+            },
+            {
+              "id": "9e534fff-5fce-402a-920d-ea3c875c0c28",
+              "name": "sentiment_confidence",
+              "value": "={{ $json.sentiment_confidence }}",
+              "type": "number"
+            },
+            {
+              "id": "b4648928-8a37-4b70-ba45-89f0e4555810",
+              "name": "sentiment_score",
+              "value": "={{ $json.sentiment_score }}",
+              "type": "number"
+            },
+            {
+              "id": "d2541bb6-97a2-4625-b60e-0762afc1f72c",
+              "name": "category",
+              "value": "={{ $json.category }}",
+              "type": "string"
+            },
+            {
+              "id": "e370068e-74bb-4752-8447-93f9534f27a1",
+              "name": "topic",
+              "value": "={{ $json.topic }}",
+              "type": "string"
+            },
+            {
+              "id": "f4c04174-b78b-45b9-adf1-234212bc06c1",
+              "name": "severity_level",
+              "value": "={{ $json.severity_level }}",
+              "type": "string"
+            },
+            {
+              "id": "17901618-0b03-4ecc-a134-60b2293516b9",
+              "name": "risk_score",
+              "value": "={{ $json.risk_score }}",
+              "type": "number"
+            },
+            {
+              "id": "7477f2c0-ca1a-4f09-b1bc-01f4d8037e22",
+              "name": "compliance_flag",
+              "value": "={{ $json.compliance_flag }}",
+              "type": "boolean"
+            },
+            {
+              "id": "c6285d51-58bd-4dfc-afb0-80a4a35b4e7b",
+              "name": "compliance_reason",
+              "value": "={{ $json.compliance_reason }}",
+              "type": "string"
+            },
+            {
+              "id": "04fabf0e-a80d-49a8-8b20-155ab7e40d64",
+              "name": "service_failure",
+              "value": "={{ $json.service_failure }}",
+              "type": "boolean"
+            },
+            {
+              "id": "9debf847-c3ba-40c8-a7e2-71b641cff500",
+              "name": "regulatory_violation",
+              "value": "={{ $json.regulatory_violation }}",
+              "type": "boolean"
+            },
+            {
+              "id": "d0dc3eb9-d5fa-4010-a9f2-3b29eaf5490e",
+              "name": "fraud_risk",
+              "value": "={{ $json.fraud_risk }}",
+              "type": "string"
+            },
+            {
+              "id": "09414cf0-ed74-4972-9bfe-c5734287749d",
+              "name": "summary",
+              "value": "={{ $json.summary }}",
+              "type": "string"
+            },
+            {
+              "id": "70df33a4-329b-4c40-aea5-0f4e4a685a8e",
+              "name": "recommended_action",
+              "value": "={{ $json.recommended_action }}",
+              "type": "string"
+            },
+            {
+              "id": "c83d3c30-41f0-4210-a103-237878a00160",
+              "name": "escalation_required",
+              "value": "={{ $json.escalation_required }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1712,
+        896
+      ],
+      "id": "ef3fb064-ccf1-4061-a3f1-76e3fa858d22",
+      "name": "Edit Fields - Gemma3:1b"
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all().map(i => i.json);\n\n// --------------------\nlet total = rows.length;\n\nlet sentiment = { positive: 0, negative: 0, neutral: 0, scoreSum: 0 };\nlet risk = { fraud: 0, compliance: 0, competitive: 0 };\nlet severity = { High: 0, Medium: 0, Low: 0 };\n\nconst isTrue = (v) => v === true || v === \"true\" || v === \"TRUE\";\n\n// --------------------\n// Process Data\n// --------------------\nfor (const r of rows) {\n  const label = (r.sentiment_label || \"\").toLowerCase();\n\n  if (label.includes(\"positive\")) sentiment.positive++;\n  else if (label.includes(\"negative\")) sentiment.negative++;\n  else sentiment.neutral++;\n\n  sentiment.scoreSum += Number(r.sentiment_confidence || 0);\n\n  if (isTrue(r.fraud_risk)) risk.fraud++;\n  if (isTrue(r.compliance_flagged)) risk.compliance++;\n  if (isTrue(r.competitive_weakness)) risk.competitive++;\n\n  if (severity[r.severity_level] !== undefined) {\n    severity[r.severity_level]++;\n  }\n}\n\n// --------------------\n// Metrics\n// --------------------\nconst avgSentiment = total ? (sentiment.scoreSum / total).toFixed(2) : 0;\n\nconst percent = (val) => total ? Math.round((val / total) * 100) : 0;\n\n// ✅ FIXED PIE CALCULATION\nconst riskTotal = risk.fraud + risk.compliance + risk.competitive;\n\nconst riskPercent = (val) => {\n  return riskTotal ? Math.round((val / riskTotal) * 100) : 0;\n};\n\n// Pie style (handles zero case)\nconst pieStyle = riskTotal === 0\n  ? \"background:#ecf0f1\"\n  : `background: conic-gradient(\n      #e74c3c 0% ${riskPercent(risk.fraud)}%,\n      #f39c12 ${riskPercent(risk.fraud)}% ${riskPercent(risk.fraud) + riskPercent(risk.compliance)}%,\n      #3498db ${riskPercent(risk.fraud) + riskPercent(risk.compliance)}% 100%\n    )`;\n\nconst totalRisks = riskTotal;\n\n// --------------------\n// HTML\n// --------------------\nconst html = `\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<style>\n\nbody {\n  font-family: Arial;\n  background: #f4f7fa;\n  padding: 20px;\n}\n\n/* KPI */\n.kpi-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 10px;\n  margin-bottom: 20px;\n}\n\n.kpi {\n  background: white;\n  padding: 15px;\n  border-radius: 10px;\n  text-align: center;\n  border: 1px solid #ddd;\n}\n\n.kpi h2 {\n  margin: 0;\n  font-size: 22px;\n}\n\n.kpi p {\n  margin: 5px 0 0;\n  color: #7f8c8d;\n}\n\n/* Cards */\n.card {\n  background: white;\n  border: 1px solid #ddd;\n  padding: 15px;\n  margin-bottom: 20px;\n  border-radius: 10px;\n}\n\n/* Bars */\n.row {\n  margin-bottom: 12px;\n}\n\n.label {\n  font-size: 13px;\n  margin-bottom: 4px;\n}\n\n.bar-container {\n  background: #ecf0f1;\n  border-radius: 20px;\n  overflow: hidden;\n}\n\n.bar {\n  height: 18px;\n  font-size: 11px;\n  color: white;\n  text-align: right;\n  padding-right: 5px;\n  line-height: 18px;\n}\n\n.green { background: #2ecc71; }\n.red { background: #e74c3c; }\n.orange { background: #f39c12; }\n.gray { background: #95a5a6; }\n\n/* Pie */\n.pie {\n  width: 140px;\n  height: 140px;\n  border-radius: 50%;\n  margin: 10px auto;\n}\n\n.center { text-align: center; }\n\n</style>\n</head>\n\n<body>\n\n<h1>📊 Risk & Sentiment Dashboard</h1>\n\n<!-- KPI -->\n<div class=\"kpi-grid\">\n  <div class=\"kpi\">\n    <h2>${total}</h2>\n    <p>Total Records</p>\n  </div>\n\n  <div class=\"kpi\">\n    <h2>${avgSentiment}</h2>\n    <p>Avg Sentiment</p>\n  </div>\n\n  <div class=\"kpi\">\n    <h2>${totalRisks}</h2>\n    <p>Total Risks</p>\n  </div>\n</div>\n\n<!-- Risk -->\n<div class=\"card center\">\n  <h2>⚠️ Risk Distribution</h2>\n\n  <div class=\"pie\" style=\"${pieStyle}\"></div>\n\n  <p>\n    🔴 Fraud (${risk.fraud})<br>\n    🟠 Compliance (${risk.compliance})<br>\n    🔵 Competitive (${risk.competitive})\n  </p>\n</div>\n\n<!-- Sentiment -->\n<div class=\"card\">\n  <h2>😊 Sentiment Breakdown</h2>\n\n  <div class=\"row\">\n    <div class=\"label\">Positive (${sentiment.positive})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar green\" style=\"width:${percent(sentiment.positive)}%\">\n        ${percent(sentiment.positive)}%\n      </div>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"label\">Negative (${sentiment.negative})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar red\" style=\"width:${percent(sentiment.negative)}%\">\n        ${percent(sentiment.negative)}%\n      </div>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"label\">Neutral (${sentiment.neutral})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar gray\" style=\"width:${percent(sentiment.neutral)}%\">\n        ${percent(sentiment.neutral)}%\n      </div>\n    </div>\n  </div>\n\n</div>\n\n<!-- Severity -->\n<div class=\"card\">\n  <h2>📌 Severity Levels</h2>\n\n  <div class=\"row\">\n    <div class=\"label\">High (${severity.High})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar red\" style=\"width:${percent(severity.High)}%\">\n        ${percent(severity.High)}%\n      </div>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"label\">Medium (${severity.Medium})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar orange\" style=\"width:${percent(severity.Medium)}%\">\n        ${percent(severity.Medium)}%\n      </div>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"label\">Low (${severity.Low})</div>\n    <div class=\"bar-container\">\n      <div class=\"bar green\" style=\"width:${percent(severity.Low)}%\">\n        ${percent(severity.Low)}%\n      </div>\n    </div>\n  </div>\n\n</div>\n\n</body>\n</html>\n`;\n\nreturn [\n  {\n    json: {\n      html\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1248,
+        336
+      ],
+      "id": "b0b9c85a-8d84-4b22-ab8a-98c207abca4f",
+      "name": "Report Format1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4620edd0-8983-490e-a42b-455f46e03504",
+              "name": "post_id",
+              "value": "={{ $json.post_id }}",
+              "type": "string"
+            },
+            {
+              "id": "bc093844-3c66-4b7a-b906-91fc88b995c4",
+              "name": "post",
+              "value": "={{ $json.post }}",
+              "type": "string"
+            },
+            {
+              "id": "068d9a26-fc53-4f94-b4e0-b68cbe662a95",
+              "name": "created_at",
+              "value": "={{ $json.created_at }}",
+              "type": "string"
+            },
+            {
+              "id": "f97728ce-3c67-4c31-9856-d57da8e66ef7",
+              "name": "post_type",
+              "value": "={{ $json.post_type }}",
+              "type": "string"
+            },
+            {
+              "id": "ea462521-1c61-4b23-90b8-f94bf9f1592f",
+              "name": "intent",
+              "value": "={{ $json.intent }}",
+              "type": "string"
+            },
+            {
+              "id": "ad055e01-57e7-48ad-bbcf-24f67d34b43b",
+              "name": "sentiment_label",
+              "value": "={{ $json.sentiment_label }}",
+              "type": "string"
+            },
+            {
+              "id": "f6a92ee9-0645-4cfe-85c8-86baaf375f4c",
+              "name": "sentiment_confidence",
+              "value": "={{ $json.sentiment_confidence }}",
+              "type": "number"
+            },
+            {
+              "id": "1b1740c8-c1d8-44ff-a78a-d5a02926b39d",
+              "name": "sentiment_score",
+              "value": "={{ $json.sentiment_score }}",
+              "type": "number"
+            },
+            {
+              "id": "04f9912a-3548-4380-a7ec-7cbee327fcc0",
+              "name": "category",
+              "value": "={{ $json.category }}",
+              "type": "string"
+            },
+            {
+              "id": "b63f42b6-c751-40c6-818f-39ac67d6bbe0",
+              "name": "topic",
+              "value": "={{ $json.topic }}",
+              "type": "string"
+            },
+            {
+              "id": "9f5e612c-54ca-4633-8062-f9002c6c9eee",
+              "name": "severity_level",
+              "value": "={{ $json.severity_level }}",
+              "type": "string"
+            },
+            {
+              "id": "bdf5b3df-99ad-49bc-aa49-06b69d019ea9",
+              "name": "risk_score",
+              "value": "={{ $json.risk_score }}",
+              "type": "number"
+            },
+            {
+              "id": "38b48500-2dfe-4dff-aa0e-d06a0cd6c796",
+              "name": "compliance_flag",
+              "value": "={{ $json.compliance_flag }}",
+              "type": "boolean"
+            },
+            {
+              "id": "0eda70c3-d7ef-4e65-938c-e03fc43305e8",
+              "name": "compliance_reason",
+              "value": "={{ $json.compliance_reason }}",
+              "type": "string"
+            },
+            {
+              "id": "339ee341-e034-49f9-bed5-258c2cc63fa4",
+              "name": "regulatory_violation",
+              "value": "={{ $json.regulatory_violation }}",
+              "type": "boolean"
+            },
+            {
+              "id": "f54e2ed5-6791-4116-8142-4a2c31a93b7b",
+              "name": "fraud_risk",
+              "value": "={{ $json.fraud_risk }}",
+              "type": "string"
+            },
+            {
+              "id": "593073c6-8880-451f-892b-89facc6fe548",
+              "name": "summary",
+              "value": "={{ $json.summary }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        960,
+        336
+      ],
+      "id": "552c1071-2dd2-4441-94f1-ae210ef0558b",
+      "name": "Edit Fields - All"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields - All",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Model",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript - Qwen3:1.7b",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript - Gemma3:1b",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk2": {
+      "main": [
+        [
+          {
+            "node": "Extract from File2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert rows in a table": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        []
+      ]
+    },
+    "AI Model": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript - Gemma3:1b": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields - Gemma3:1b",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript - Qwen3:1.7b": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields - Qwen3:1.7b",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields - Gemma3:1b": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Report Format1": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields - All": {
+      "main": [
+        [
+          {
+            "node": "Report Format1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Insert rows in a table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "fe75b1ab-8312-4efd-be9d-bc0299c54fab",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "339042843512f017ce2fde54cb8b4b727051a2910771a77ab09bf97cd029360d"
+  },
+  "id": "eWNAvN29Pl3p8FsV",
+  "tags": []
+}

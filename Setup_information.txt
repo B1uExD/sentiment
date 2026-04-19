@@ -1,0 +1,16 @@
+Setup information:
+
+1. Install Docker Desktop.
+
+2. Use the Docker Desktop to Run N8N and PostgreSQL on Windows on locally after downloading the YML file for N8N, PostgreSQL. Also update the .env file with necessary value, skip the fields not required.
+-> docker compose -f <YML File Location> up -d [To start a container]
+-> docker compose -f <YML File Location> down -v [To bring down already running container]
+
+3. N8N gets hosted on localhost:5678 -> open the page and login. Create a new workflow and on top left side click on 3 dots icon and import the JSON file -  Sentiment Analysis_Final.
+
+4. The Sentiment Analysis JSON file for N8N is configured with Ollama.
+Install Ollama from Ollama website.
+And in N8N Workflow, go to the Ollama node and update the API information with the model downloaded in Ollama.
+
+5. to run the dashboard, use the command "streamlit run app.py" after entering the folder and opening cmd. please note python and  necessary python libs are installed. to install python libs in requirements.txt use command "pip install -r requirements.txt".
+
